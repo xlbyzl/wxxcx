@@ -1,0 +1,13 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/detail/detail",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#c44944",
+    "navigationBarTitleText": "今日头条",
+    "navigationBarTextStyle": "white"
+  }
+}

@@ -1,0 +1,7 @@
+<!--pages/detail/detail.wxml-->
+<import src="/wxParse/wxParse.wxml"/>
+<view id='container'>
+  <view class='title'>{{title}}</view>
+  <view class='hr'></view>
+  <view class='body'><template is="wxParse" data="{{wxParseData:body.nodes}}"/></view>
+</view>

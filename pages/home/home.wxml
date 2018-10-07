@@ -1,0 +1,37 @@
+<!--pages/home/home.wxml-->
+<view id='container'>
+<!-- 导航栏 -->
+  <view class='nav'>
+    <!-- 搜索图标 -->
+    <view class='search'>
+      <text class='iconfont icon-search'></text>
+    </view>
+    <!-- 滑动导航 -->
+      <scroll-view scroll-x class='menus'>
+        <view  bindtap='switcher' data-key='{{item.key}}' wx:for='{{menus}}' wx:key='menus' class="{{item.key == current?'active':''}}">{{item.name}}</view>
+      </scroll-view>
+    <!-- 添加图标 -->
+    <view class='add'>
+      <text class='iconfont icon-add'></text>
+    </view>
+    <!-- 用户图标 -->
+    <view class='user'>
+      <text class='iconfont icon-user'></text>
+    </view>
+  </view>
+<!-- 内容 -->
+<swiper style='height:{{height}}px' current-item-id='{{current}}' bindchange='change'>
+  <swiper-item wx:for='{{menus}}' wx:key='menus' item-id='{{item.key}}'>
+  <!-- 单条新闻 -->
+    <scroll-view scroll-y style='height:100%' bingtap='onReachBottom'>
+      <navigator class='content' scroll-y wx:for='{{news}}' wx:key='news' url='../detail/detail?id={{item.docid}}'>
+        <view class='left'>
+          <view class='title'>{{item.title}}</view>
+          <view class='refer'>{{item.recSource}}</view>
+        </view>
+        <view class='right'><image src='{{item.img}}' mode='widthFix'></image></view>
+      </navigator>
+    </scroll-view>
+  </swiper-item>
+</swiper>
+</view>

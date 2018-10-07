@@ -1,0 +1,75 @@
+/* pages/home/home.wxss */
+@import "/css/iconfont.wxss";
+#container{
+  width:750rpx;
+}
+#container .nav{
+  height: 90rpx;
+  border-bottom:1rpx solid #ddd;
+}
+#container .nav .search{
+  width:90rpx;
+  height:90rpx;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  float:left;
+}
+#container .nav text{
+  font-size:38rpx;
+}
+#container .nav .menus{
+  width:475rpx;
+  height:84rpx;
+  line-height:84rpx;
+  float:left;
+  white-space: nowrap;
+}
+#container .nav .menus view{
+  height: 100%;
+  display: inline-block;
+  margin-right:29rpx;
+  font-size:36rpx;
+}
+#container .nav .menus .active{
+  border-bottom:6rpx solid #e7655f;
+  color:#e7655f;
+}
+#container .nav .add,#container .nav .user{
+  float:left;
+  width:92rpx;
+  height:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 内容块 */
+.content{
+  width:90%;
+  margin:0 auto;
+  padding:30rpx 0rpx;
+  box-sizing: border-box;
+  border-bottom:1rpx solid #ddd;
+  display: flex;
+}
+.left{
+  flex:2;
+  display: flex;
+  margin-right: 20rpx;
+  flex-direction: column;
+  justify-content: space-between
+}
+.left .title{
+  font-size:36rpx;
+}
+.left .refer{
+  font-size:26rpx;
+  margin-top:20rpx;
+}
+.right{
+  flex:1;
+}
+.content .right image{
+  width:100%;
+}
